@@ -1,0 +1,150 @@
+.banner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.para_voce_banner{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: clamp(150px, 25vw, 400px);
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.banner-credit {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 25;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--background);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.banner-credit:hover {
+    opacity: 1;
+}
+
+.content p {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    hyphens: auto;
+    text-align: justify;
+    justify-content: left;
+    max-width: 1200px;
+}
+
+.contact-info h1 {
+    margin-bottom: 1rem;
+    font-family: "DM-Sans", sans-serif;
+    font-weight: 400;
+}
+
+.contact-info h2 {
+    margin-top: 1rem;
+    font-family: "DM-Sans", sans-serif;
+    font-weight: 400;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+.contact-info{
+    font-family: "Manrope", sans-serif;
+    width: clamp(800px, 20vw, 800px);
+    margin: 2rem auto;
+    border: 1px solid var(--accent);
+    padding: 4rem;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.emergency-list {
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+.contact-list li::marker {
+  content: "- ";
+}
+
+.blue-line {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-top: 2px solid var(--accent);
+    width: 20%;
+    height: 1px;
+}
+
+.contact-list {
+    list-style-position: inside;
+    font-family: "Manrope", sans-serif;
+    width: clamp(800px, 20vw, 800px);
+    margin: 0rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.youtube-embed-block {
+    font-family: "Manrope", sans-serif;
+    width: clamp(800px, 20vw, 800px);
+    margin: 2rem auto;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
+
+.youtube-embed-block h2 {
+    margin-top: 0rem;
+}
+
+.youtube-embed-block p {
+    margin-bottom: 1rem;
+}
+
+.youtube-embed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.forum-block {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.2rem;
+    width: clamp(800px, 20vw, 800px);
+    margin: 2rem auto;
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.forum-button {
+    font-family: "DM-Sans", sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    width: 8rem;
+    justify-content: center;
+    border: 0px solid var(--accent);
+    font-family: "DM-Sans", sans-serif;
+    background: var(--accent);
+    color: var(--background);
+    padding: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.forum-button:hover {
+    background: var(--accent-extra);
+}

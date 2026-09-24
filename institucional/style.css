@@ -1,0 +1,149 @@
+.banner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.institucional_banner {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: clamp(150px, 25vw, 400px);
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.institucional_banner2 {
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+    height: clamp(150px, 25vw, 400px);
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+
+.banner-credit {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 25;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--background);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.banner-credit:hover {
+    opacity: 1;
+}
+
+.info-content {
+    font-family: "Manrope";
+    display: flow-root;
+    max-width: 1200px;
+    margin: 5.5rem auto 2rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    text-align: justify;
+    justify-content: left;
+    hyphens: auto;
+}
+
+.info-figure {
+    float: left;
+    width: clamp(500px, 20vw, 400px);
+    margin: 0 1.5rem 1rem 0;
+}
+
+.info-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logo_desc {
+    font-size: 1.0rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #555;
+    margin-top: 0.3rem;
+}
+
+.info-content p::first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 0.8;
+    padding-right: 0.1em;
+    font-weight: bold;
+}
+
+.info-block-text {
+    margin-top: 2.5rem;
+}
+
+.content p {
+    display: flex;
+    hyphens: auto;
+    text-align: justify;
+    justify-content: left;
+    max-width: 1200px;
+}
+
+.content_list {
+    text-align: justify;
+    justify-content: left;
+    max-width: 800px;
+    font-size: 1.1rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.banner {
+    font-family: "Manrope";
+}
+
+.banner h3 {
+    font-size: 1.0rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: #555;
+    margin-top: 0.3rem;
+    margin-bottom: 2.5rem;
+}
+
+.banner-description-anchor:hover {
+    text-decoration: underline;
+}
+
+.cards-roll {
+    font-family: "Manrope";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    width: fit-content;
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.cards-roll img {
+    align-content: center;
+    height: 200px;
+    background-color: var(--background-high);
+    padding: 10px;
+    margin: 5px;
+    width: auto;
+    object-fit: contain;
+}
+
+.card figcaption {
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}

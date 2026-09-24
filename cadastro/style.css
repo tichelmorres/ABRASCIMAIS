@@ -1,0 +1,116 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 420px;
+    background: var(--background);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--accent);
+    border-radius: 15px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); */
+}
+
+.register-header {
+    font-family: "DM-Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+}
+
+.register-fields {
+    font-family: "DM-Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-field {
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-field label {
+    font-family: "Manrope", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.input-field input {
+    font-family: "Manrope", sans-serif;
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+    color: var(--foreground);
+    border: 1px solid var(--background-extra);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field input::placeholder {
+    color: var(--foreground-dim);
+}
+
+.input-field input:focus {
+    border-color: var(--accent);
+}
+
+.password-hint {
+    font-style: italic;
+    color: var(--foreground-dim);
+}
+
+.create-account-button {
+    margin-top: 0.5rem;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--background);
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.create-account-button:hover {
+    background: var(--accent-extra);
+}
+
+.create-account-button:active {
+    transform: scale(0.98);
+}
+
+.register-footer {
+    font-family: "Manrope", sans-serif;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--foreground-dim);
+}
+
+.register-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: 0.56rem;
+}
+
+.register-footer a:hover {
+    color: var(--accent-extra);
+    text-decoration: underline;
+}

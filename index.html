@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ABRASCI - Educação em Saúde e Cuidado da Pessoa Idosa</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-left">
+                <a href="#">
+                    <img src="assets/LOGO.png" alt="Logo ABRASCI" class="logo" />
+                </a>
+                <h1>Educação em Saúde e<br /> Cuidado da Pessoa Idosa</h1>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="institucional/index.html">Institucional</a></li>
+                    <li><a href="para_voce/index.html">Para Você</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">ABRASCI+ Educação</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ABRA_gratuito/index.html">Instrução<br />gratuita</a></li>
+                            <li><a href="ABRA_pago/index.html">Comprar curso<br />de capacitação</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="noticias/index.html">Notícias</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-divider"></div>
+
+            <div class="header-actions">
+                <a href="./login/index.html" class="header-button login-button">Login</a>
+                <a href="./cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="carousel">
+                <div class="carousel-track">
+                    <div class="slide active" aria-label="Slide 1 de 4">
+                        <img src="./assets/idosos.jpg" alt="Casal de idosos sorridente tirando uma selfie ao ar livre" />
+                        <div class="slide-overlay first-slide-overlay">
+                            <h2 class="overlay-title">Sua saúde<br />importa!</h2>
+                            <a href="#" class="overlay-button overlay-button--accent">Conhecer</a>
+                        </div>
+                    </div>
+
+                    <div class="slide" aria-label="Slide 2 de 4">
+                        <div class="second-slide-image">
+                            <img src="./assets/familia.jpg" alt="Avô abraçando as netas sorridentes" />
+                        </div>
+                        <div class="slide-overlay second-slide-overlay">
+                            <h2 class="overlay-title overlay-title">Um cuidado<br />que faz<br />a diferença</h2>
+                            <a href="#" class="overlay-button overlay-button--accent">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="slide" aria-label="Slide 3 de 4">
+                        <img src="./assets/cuidadora.jpg" alt="Cuidadora sorridente apoiando a mão no ombro de uma senhora idosa" />
+                        <div class="slide-overlay third-slide-overlay">
+                            <h2 class="overlay-title overlay-title--accent">Um cuidado<br />que faz<br />a diferença</h2>
+                            <a href="#" class="overlay-button overlay-button--accent">Saiba mais</a>
+                        </div>
+                    </div>
+
+                    <div class="slide" aria-label="Slide 4 de 4">
+                        <img src="./assets/pcd.jpg" alt="Idoso em cadeira de rodas usando o celular, sentado à mesa com notebook" />
+                        <div class="slide-overlay fourth-slide-overlay">
+                            <h2 class="overlay-title">Sua saúde<br />importa!</h2>
+                            <a href="#" class="overlay-button">Conhecer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="carousel-button previous" aria-label="Imagem anterior">
+                    <svg class="chevron-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <button type="button" class="carousel-button next" aria-label="Próxima imagem">
+                    <svg class="chevron-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8.5 5 7 7-7 7" /></svg>
+                </button>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <a href="https://freepik.com" target="_blank" rel="noopener noreferrer" class="carousel-credit"> Fonte: freepik.com </a>
+            </section>
+
+            <section class="SOU_cards">
+                <a href="#sou-idoso" class="SOU_card">
+                    <img src="./assets/icon_idoso.png" alt="" class="card_icon" />
+                    <p class="card_text">Sou idoso</p>
+                </a>
+
+                <a href="#sou-pcd" class="SOU_card">
+                    <img src="./assets/icon_pcd.png" alt="" class="card_icon" />
+                    <p class="card_text">Sou PCD</p>
+                </a>
+
+                <a href="#sou-familiar" class="SOU_card">
+                    <img src="./assets/icon_familiar.png" alt="" class="card_icon" />
+                    <p class="card_text">Sou familiar</p>
+                </a>
+
+                <a href="#sou-cuidador" class="SOU_card">
+                    <img src="./assets/icon_cuidador.png" alt="" class="card_icon" />
+                    <p class="card_text">Sou cuidador</p>
+                </a>
+            </section>
+
+            <section class="content">
+                <h2>Cuidar também se aprende</h2>
+                <p>Poucas pessoas se preparam para cuidar de um idoso. Na maioria das vezes, a tarefa chega sem que se espere, por causa de uma queda no banheiro, ou por um diagnóstico inesperado, ou mesmo por uma internação que se prolonga. Alguém da família assume, porque alguém precisa assumir, e essa trajetória de aprendizado começa ali mesmo, entre uma consulta e outra.</p>
+                <p>Entretanto, quase ninguém explica como ajudar alguém a levantar sem machucar as costas, o que observar na alimentação, no sono e no humor, quando o esquecimento deixa de ser normal, como conversar com quem se recusa a aceitar ajuda. Sem orientação, tudo isso se torna ainda mais difícil, tanto para a pessoa idosa quanto para quem cuida dela.</p>
+                <p>A ABRASCI+ foi criada para preencher essa lacuna. Somos uma plataforma digital de educação e apoio ao cuidado, voltada a idosos, familiares, cuidadores profissionais e a qualquer pessoa interessada em envelhecer com saúde. Reunimos conteúdos educativos, cursos de capacitação e ferramentas digitais, e mantemos uma rede de apoio para que ninguém precise resolver tudo por conta própria.</p>
+                <p>Nosso princípio é simples: as informações confiáveis, se ditas com clareza, tornam o cuidado mais seguro, fácil e efetivo. Quem cuida com conhecimento erra menos, se desgasta menos e consegue enxergar a pessoa que está à sua frente, com história, vontades e direito de opinar sobre a própria vida. Para conhecer a associação por dentro, veja <a href="institucional/index.html">quem somos, nossa história e nossos valores</a>.</p>
+
+                <section id="sou-idoso">
+                    <h3>Sou idoso</h3>
+                    <p>Chega uma fase em que as pessoas ao redor começam a decidir por você. Decidem o que é melhor comer, se é seguro sair sozinho, se ainda vale a pena mexer no dinheiro. Em geral isso vem de uma preocupação sincera, mas o resultado é que vamos sendo poupados até das escolhas que sempre foram nossas, e das quais ainda deveríamos ter controle, não é verdade?</p>
+                    <p>Conhecer o próprio corpo, os riscos da rotina e os direitos que a lei garante é o que devolve o controle da conversa. A ABRASCI+ reúne informações sobre saúde, prevenção e direitos numa linguagem direta, em <a href="ABRA_gratuito/index.html">vídeos de acesso gratuito</a>, pensados para adultos com muita vida vivida que querem seguir participando das decisões. Todos nós temos uma voz, e é preciso que nos ouçam.</p>
+                </section>
+
+                <section id="sou-pcd">
+                    <h3>Sou PCD</h3>
+                    <p>Grande parte do que se produz sobre envelhecimento imagina um idoso sem deficiência, com o corpo, a casa e a rotina todos convencionais. Quem envelhece com uma deficiência, ou já convive com ela há décadas, encontra pouco material que lhe diga respeito. Perguntas simples, como adaptar o banheiro, reorganizar a rotina de cuidados ou ajustar hábitos quando a idade muda uma condição que já existia, ficam sem resposta.</p>
+                    <p>Famílias que têm um parente com deficiência passam pelo mesmo vazio. Por isso a ABRASCI+ leva acessibilidade e inclusão a sério e considera, ao preparar seus conteúdos, que cada pessoa tem necessidades diferentes. A meta é a mesma para todos: manter a autonomia pelo maior tempo possível, com os ajustes que cada caso pedir. Se algo de que você precisa ainda não estiver contemplado, escreva para <a href="mailto:abrasci.mais@gmail.com">abrasci.mais@gmail.com</a>.</p>
+                </section>
+
+                <section id="sou-familiar">
+                    <h3>Sou familiar</h3>
+                    <p>Seja honesto: alguém pergunta se você quer ser cuidador? Na maioria das vezes, não. A rotina simplesmente muda, e de repente outras coisas passam a fazer parte dos seus dias: consultas, exames, remédios em horários certos, ligações para o plano de saúde... Tudo isso convive com o trabalho, com a própria casa, com os filhos, e quase sempre vem acompanhado de uma pergunta incômoda: será que estou fazendo direito?</p>
+                    <p>Essa dúvida é comum e mostra que você leva a tarefa a sério. Na ABRASCI+ há orientação prática para o dia a dia e uma rede de familiares que enfrentam o mesmo desafio. Quem cuida também precisa de apoio, e reconhecer isso faz parte do nosso trabalho.</p>
+                </section>
+
+                <section id="sou-cuidador">
+                    <h3>Sou cuidador</h3>
+                    <p><span style="font-weight: bold;">a decidir</span></p>
+                </section>
+
+                <section id="sobre">
+                    <h3>Sobre a ABRASCI+</h3>
+                    <p>A ABRASCI é a Associação Brasileira de Segurança e Cuidado ao Idoso. O nome diz o que nos move: segurança, porque muitos riscos da velhice podem ser evitados com informação e hábitos simples, e cuidado, porque dele depende a qualidade dos anos que a pessoa idosa vive. A ABRASCI+ é a plataforma por meio da qual esse trabalho chega até você.</p>
+                    <p>Acreditamos que ninguém deveria depender da sorte para cuidar bem de alguém. Por isso apostamos na educação digital, que permite a um conteúdo bem feito alcançar a casa de um familiar em qualquer cidade e o horário de um cuidador que só consegue estudar à noite.</p>
+                    <p>Também trabalhamos para aproximar quem cuida de quem pode ajudar: familiares, cuidadores, profissionais, instituições e parceiros. Fazemos isso com transparência, com responsabilidade social e com cuidado na proteção das informações e da privacidade de quem usa a plataforma.</p>
+                    <p>Se você faz parte de uma instituição, tem uma proposta de parceria ou só quer conversar, o nosso <a href="#contato">contato</a> está no fim desta página. Para conhecer a associação a fundo, incluindo missão, visão e valores, visite a página <a href="institucional/index.html">Institucional</a>.</p>
+                </section>
+
+                <section>
+                    <h3>Por onde começar</h3>
+                    <p>Quem quiser dar o primeiro passo sem compromisso pode acessar a <a href="ABRA_gratuito/index.html">instrução gratuita</a>, que reúne em um só lugar os vídeos públicos do nosso <a href="https://youtube.com/@ABRASCImais" target="_blank" rel="noopener noreferrer">canal no YouTube</a>. Quem busca uma formação mais completa encontra os <a href="ABRA_pago/index.html">cursos de capacitação</a>, com materiais exclusivos, mediante mensalidade. Em ambos os casos, a ideia é a mesma: que ninguém precise cuidar no improviso.</p>
+                    <p>Para esclarecimentos e suporte, escreva para <a href="mailto:abrasci.mais@gmail.com">abrasci.mais@gmail.com</a>.</p>
+                </section>
+            </section>
+        </main>
+
+        <footer id="contato">
+            <div class="footer">
+
+                <h2>ABRASCI+</h2>
+
+                <div class="footer-columns">
+                    <ul class="footer-list">
+                        <li>
+                            <img src="assets/footer/home.png" alt="" class="list-icon">
+                            <a href="index.html">Início</a>
+                        </li>
+                        <li>
+                            <img src="assets/footer/megaphone.png" alt="" class="list-icon">
+                            <a href="./noticias/index.html">Notícias</a>
+                        </li>
+                        <li>
+                            <img src="assets/footer/profile.png" alt="" class="list-icon">
+                            <a href="./para_voce/index.html">Para você</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <img src="assets/footer/business-and-trade.png" alt="" class="list-icon">
+                            <a href="./institucional/index.html">Institucional</a>
+                        </li>
+                        <li>
+                            <img src="assets/footer/open-book.png" alt="" class="list-icon">
+                            <a href="./ABRA_gratuito/index.html">Instrução Gratuita</a>
+                        </li>
+                        <li>
+                            <img src="assets/footer/certificate.png" alt="" class="list-icon">
+                            <a href="./ABRA_pago/index.html">Comprar Curso de Capacitação</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-media-list">
+                        <li>
+                            <img src="assets/footer/inbox.png" alt="" class="list-icon">
+                            <a href="mailto:abrasci.mais@gmail.com">abrasci.mais@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="assets/footer/youtube.png" alt="" class="list-icon">
+                            <a href="https://youtube.com/@ABRASCImais">youtube.com/@ABRASCImais</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="footer-copy">Copyright @ 2026 ABRASCI+. Todos os direitos reservados.</p>
+
+                <ul class="footer-bottom">
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">LGPD</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            const slides = document.querySelectorAll(".slide");
+            const nextButton = document.querySelector(".next");
+            const previousButton = document.querySelector(".previous");
+            const progressBar = document.querySelector(".progress-bar");
+
+            let currentSlide = 0;
+            let slideTimer;
+            const SLIDE_TIME = 10000;
+
+            function showSlide(index) {
+                slides.forEach((slide) => slide.classList.remove("active"));
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].classList.add("active");
+                restartProgressBar();
+                restartTimer();
+            }
+
+            function restartProgressBar() {
+                progressBar.style.animation = "none";
+                progressBar.offsetHeight;
+                progressBar.style.animation = "progressBar 10s linear forwards";
+            }
+
+            function restartTimer() {
+                clearTimeout(slideTimer);
+                slideTimer = setTimeout(() => {
+                    showSlide(currentSlide + 1);
+                }, SLIDE_TIME);
+            }
+
+            nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
+            previousButton.addEventListener("click", () => showSlide(currentSlide - 1));
+
+            showSlide(0);
+        </script>
+    </body>
+</html>

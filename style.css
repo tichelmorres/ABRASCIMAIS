@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --background: #ffffff;
+    --background-high: #efefef;
+    --background-extra: #afafaf;
+    --foreground: #181825;
+    --accent: #2c85c8;
+    --accent-extra: #2777b4;
+    --accent3: #ededed;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+a {
+    color: inherit;
+}
+
+/* header */
+.header {
+    width: 100%;
+    min-height: 9rem;
+    padding: 1.5rem 5%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--background);
+}
+
+.header-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: clamp(20px, 9vw, 70px);
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.3);
+}
+
+.header h1 {
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.75rem;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    color: var(--background);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.header-button:hover {
+    transform: scale(1.06);
+    filter: brightness(1.12);
+}
+
+.login-button {
+    background-color: var(--accent);
+    margin: 0 0 0 1rem;
+}
+
+.register-button {
+    background-color: var(--accent3);
+    color: var(--foreground);
+}
+
+/* barra de navegação */
+.navbar {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    background: transparent;
+    padding: 0;
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.nav-list > li {
+    position: relative;
+}
+
+.nav-list > li > a {
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    color: var(--foreground);
+    font-size: clamp(0.85rem, 1.4vw, 1.0rem);
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-list > li > a:hover,
+.dropdown:hover > .dropdown-toggle {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    position: absolute;
+    min-width: 220px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10;
+    background-color: var(--background);
+    border-radius: 8px;
+    list-style: none;
+    text-align: center;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: var(--foreground);
+    transition: background-color 0.2s ease;
+    font-family: "Manrope", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.header-divider {
+    width: 2px;
+    height: 1.5rem;
+    background-color: var(--background-extra);
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: clamp(300px, 50vw, 750px);
+    margin: 0 0 3rem 0;
+    overflow: hidden;
+    font-family: "DM Sans", sans-serif;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(2.5rem, 5vw, 3.5rem);
+    height: clamp(2.5rem, 5vw, 3.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(from var(--accent) r g b / 0.5);
+    color: var(--background);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.carousel-button:hover {
+    background-color: var(--accent-extra);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-button:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+.chevron-svg {
+    width: 45%;
+    height: 45%;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.previous {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+.progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--background);
+    z-index: 20;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent);
+}
+
+@keyframes progressBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+.carousel-credit {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 25;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.0rem;
+    font-weight: 400;
+    color: var(--background);
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.carousel-credit:hover {
+    opacity: 1;
+}
+
+/* CTA sobre os slides */
+.slide-overlay {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+}
+
+.first-slide-overlay {
+    top: 30%;
+    right: 10%;
+    max-width: 40%;
+    align-items: center;
+    text-align: center;
+}
+
+.second-slide-overlay {
+    top: 30%;
+    left: 8%;
+    max-width: 40%;
+    align-items: center;
+    text-align: center;
+}
+
+.second-slide-image {
+    filter: brightness(0.8);
+}
+
+.third-slide-overlay {
+    top: 30%;
+    left: 8%;
+    max-width: 40%;
+    align-items: center;
+    text-align: center;
+}
+
+.fourth-slide-overlay {
+    top: 30%;
+    right: 10%;
+    max-width: 40%;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay-title {
+    margin: 0;
+    color: var(--background);
+    font-size: clamp(3rem, 5vw, 4.25rem);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.overlay-title--accent {
+    color: var(--accent);
+}
+
+.overlay-button {
+    display: inline-block;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-weight: 600;
+    font-size: 1.56rem;
+    padding: 0.85rem 2.25rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.overlay-button:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.overlay-button--accent {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.overlay-button--accent:hover {
+    filter: brightness(1.2);
+}
+
+/* Sou idoso, Sou familiar, Sou PCD... */
+.SOU_cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.SOU_card {
+    background-color: var(--background-high);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    min-height: 160px;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.SOU_card:hover {
+    background-color: var(--background);
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.card_icon {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0) saturate(100%) invert(44%) sepia(51%) saturate(1450%) hue-rotate(178deg) brightness(96%) contrast(93%);
+    object-fit: contain;
+}
+
+.card_text {
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--foreground);
+    line-height: 1.4;
+}
+
+/* texto */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    font-family: "Manrope", sans-serif;
+}
+
+.content h2 {
+    margin-bottom: 1.5rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
+}
+
+.content p,
+.content li {
+    max-width: none;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.content > p {
+    margin-bottom: 1.25rem;
+}
+
+.content > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.content section p + p {
+    margin-top: 1.25rem;
+}
+
+/* Sou idoso, Sou PCD, Missão, Visão, Valores... */
+.content section {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    scroll-margin-top: 1.5rem;
+}
+
+.content h3 {
+    margin-bottom: 1rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.content p a {
+    color: var(--accent-extra);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.content p a:hover {
+    color: var(--accent);
+}
+
+.content strong {
+    font-weight: 700;
+}
+
+.values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.footer {
+    background: var(--accent);
+    width: 100%;
+    font-family: "Manrope", sans-serif;
+    padding: 3rem 2rem;
+    color: var(--background);
+    text-align: left;
+}
+
+.footer h2 {
+    margin-bottom: 2rem;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 600;
+    text-align: left;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 7rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-list,
+.footer-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: left;
+}
+
+.footer-media-list {
+    text-decoration: underline;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.list-icon {
+    height: 16px;
+    width: 16px;
+    flex-shrink: 0;
+    margin-right: 5px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.footer-copy {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.footer-bottom {
+    list-style: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}

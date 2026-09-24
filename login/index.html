@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ABRASCI - Educação em Saúde e Cuidado da Pessoa Idosa</title>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-left">
+                <a href="../index.html">
+                    <img src="../assets/LOGO.png" alt="Logo ABRASCI" class="logo" />
+                </a>
+                <h1>Educação em Saúde e<br /> Cuidado da Pessoa Idosa</h1>
+            </div>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="../institucional/index.html">Institucional</a></li>
+                    <li><a href="../para_voce/index.html">Para Você</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle">ABRASCI+ Educação</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../ABRA_gratuito/index.html">Instrução<br />gratuita</a></li>
+                            <li><a href="../ABRA_pago/index.html">Comprar curso<br />de capacitação</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../noticias/index.html">Notícias</a></li>
+                    <li><a href="../institucional/index.html">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-divider"></div>
+
+            <div class="header-actions">
+                <a href="../login/index.html" class="header-button login-button">Login</a>
+                <a href="../cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+            </div>
+        </header>
+
+        <main class="register">
+            <div class="register-container">
+                <header class="register-header">
+                    <h1>Entre na sua conta</h1>
+                </header>
+
+                <form class="register-fields" action="#" method="post">
+                    <div class="input-field">
+                        <label for="name">Nome</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Seu nome"
+                            minlength="3"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password">Senha</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Insira sua senha"
+                            minlength="8"
+                            required
+                        />
+                    </div>
+                    <button type="submit" class="create-account-button">Entrar</button>
+                </form>
+
+                <footer class="register-footer">
+                    <p>Não tem uma conta?<a href="../cadastro/index.html" class="footer-login"> Crie uma agora mesmo!</a></p>
+                </footer>
+            </div>
+        </main>
+
+        <footer id="contato">
+            <div class="footer">
+
+                <h2>ABRASCI+</h2>
+
+                <div class="footer-columns">
+                    <ul class="footer-list">
+                        <li>
+                            <img src="../assets/footer/home.png" alt="" class="list-icon">
+                            <a href="../index.html">Início</a>
+                        </li>
+                        <li>
+                            <img src="../assets/footer/megaphone.png" alt="" class="list-icon">
+                            <a href="../noticias/index.html">Notícias</a>
+                        </li>
+                        <li>
+                            <img src="../assets/footer/profile.png" alt="" class="list-icon">
+                            <a href="../para_voce/index.html">Para você</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <img src="../assets/footer/business-and-trade.png" alt="" class="list-icon">
+                            <a href="../institucional/index.html">Institucional</a>
+                        </li>
+                        <li>
+                            <img src="../assets/footer/open-book.png" alt="" class="list-icon">
+                            <a href="../ABRA_gratuito/index.html">Instrução Gratuita</a>
+                        </li>
+                        <li>
+                            <img src="../assets/footer/certificate.png" alt="" class="list-icon">
+                            <a href="../ABRA_pago/index.html">Comprar Curso de Capacitação</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-media-list">
+                        <li>
+                            <img src="../assets/footer/inbox.png" alt="" class="list-icon">
+                            <a href="mailto:abrasci.mais@gmail.com">abrasci.mais@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="../assets/footer/youtube.png" alt="" class="list-icon">
+                            <a href="https://youtube.com/@ABRASCImais">youtube.com/@ABRASCImais</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="footer-copy">Copyright @ 2026 ABRASCI+. Todos os direitos reservados.</p>
+
+                <ul class="footer-bottom">
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">LGPD</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="../api.js" defer></script>
+        <script src="main.js" defer></script>
+    </body>
+</html>
