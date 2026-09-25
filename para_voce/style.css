@@ -31,6 +31,10 @@
     opacity: 1;
 }
 
+.content {
+    margin: 5.5rem auto 2rem;
+}
+
 .content p {
     font-family: "Manrope", sans-serif;
     display: flex;
@@ -105,10 +109,11 @@
 
 .youtube-embed-block h2 {
     margin-top: 0rem;
+    margin-bottom: 1.25rem;
 }
 
 .youtube-embed-block p {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .youtube-embed {
@@ -117,34 +122,5 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.forum-block {
-    font-family: "Manrope", sans-serif;
-    font-size: 1.2rem;
-    width: clamp(800px, 20vw, 800px);
-    margin: 2rem auto;
-    border: 1px solid var(--accent);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: left;
-}
-
-.forum-button {
-    font-family: "DM-Sans", sans-serif;
-    font-size: 1.2rem;
-    display: flex;
-    width: 8rem;
-    justify-content: center;
-    border: 0px solid var(--accent);
-    font-family: "DM-Sans", sans-serif;
-    background: var(--accent);
-    color: var(--background);
-    padding: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.forum-button:hover {
-    background: var(--accent-extra);
+    margin-top: 0.5rem;
 }

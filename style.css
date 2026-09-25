@@ -526,6 +526,7 @@ h2 {
 }
 
 .footer {
+    position: relative;
     background: var(--accent);
     width: 100%;
     font-family: "Manrope", sans-serif;
@@ -606,4 +607,64 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+/* bloco do fórum */
+.footer-forum {
+    position: absolute;
+    top: 50%;
+    right: 8rem;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 400px;
+}
+
+.footer-forum p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: inherit;
+}
+
+.footer-forum-question {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.footer-forum-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    margin-top: 0.4rem;
+}
+
+.footer-forum-button {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--background);
+    color: var(--accent);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-forum-button:hover {
+    transform: scale(1.06);
+    filter: brightness(0.95);
+}
+
+.footer-forum-note {
+    font-weight: bold;
+    opacity: 0.75;
+    margin: 0;
 }
