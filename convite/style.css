@@ -1,0 +1,65 @@
+.invite-showcase {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+}
+
+.invite-frame {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    width: 60%;
+    max-width: 1400px;
+}
+
+.invite-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.invite-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.4rem 3rem;
+    border-radius: 999px;
+    background-color: var(--accent);
+    color: var(--background);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.invite-button:hover {
+    background-color: var(--accent-extra);
+    transform: scale(1.02);
+}
+
+.invite-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.invite-link {
+    position: absolute;
+    z-index: 10;
+    color: var(--accent);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: underline;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.invite-link:hover {
+    color: var(--accent-extra);
+}

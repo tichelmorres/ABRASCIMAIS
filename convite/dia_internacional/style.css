@@ -1,0 +1,24 @@
+.invite-frame {
+    container-type: inline-size;
+}
+
+.invite-button {
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    z-index: 10;
+    gap: 0.8cqw;
+    padding: 3cqw 3.5cqw;
+    font-size: 2.8cqw;
+}
+
+.invite-icon {
+    width: 2.6cqw;
+    height: 2.6cqw;
+}
+
+.invite-link {
+    top: 42%;
+    left: 57%;
+    font-size: 2cqw;
+}
