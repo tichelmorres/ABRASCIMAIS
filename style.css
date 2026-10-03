@@ -325,6 +325,65 @@ h2 {
     opacity: 1;
 }
 
+/* slide da pesquisa: imagem sempre inteira (contain) + botão posicionado
+   em coordenadas relativas à imagem (mesmos valores de convite/pesquisa) */
+.slide--pesquisa {
+    container-type: size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.pesquisa-slide-frame {
+    container-type: inline-size;
+    position: relative;
+    /* quadrado (proporção da pesquisa.jpg) com o maior lado que cabe no slide */
+    width: min(100cqw, 100cqh);
+    aspect-ratio: 1 / 1;
+    line-height: 0;
+}
+
+.pesquisa-slide-frame > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.pesquisa-slide-button {
+    position: absolute;
+    top: 44%;
+    left: 62%;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8cqw;
+    padding: 3cqw 3.5cqw;
+    border-radius: 999px;
+    background-color: var(--accent);
+    color: var(--background);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 2.8cqw;
+    line-height: normal;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pesquisa-slide-button:hover {
+    background-color: var(--accent-extra);
+    transform: scale(1.02);
+}
+
+.pesquisa-slide-button .pesquisa-slide-icon {
+    width: 2.6cqw;
+    height: 2.6cqw;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 /* CTA sobre os slides */
 .slide-overlay {
     position: absolute;
