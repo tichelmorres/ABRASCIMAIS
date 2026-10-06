@@ -63,3 +63,20 @@
 .invite-link:hover {
     color: var(--accent-extra);
 }
+
+@media (max-width: 1240px) {
+    .invite-showcase {
+        padding: 2.5rem 0;
+    }
+
+    .invite-frame {
+        width: 92%;
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .invite-showcase {
+        padding: 1.25rem 0 2rem;
+    }
+}

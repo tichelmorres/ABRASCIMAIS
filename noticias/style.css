@@ -17,7 +17,6 @@
 .news-hero-frame {
     display: block;
     width: 100%;
-    /* parceria.jpeg (1415x1112); max-height evita que fique maior que a tela */
     aspect-ratio: 1415 / 1112;
     max-height: 720px;
     background-color: var(--background);
@@ -81,8 +80,8 @@
 
 .news-grid {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); <- previous */
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); <- previous */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
 }
 
@@ -110,6 +109,7 @@
 .news-card-frame {
     display: block;
     width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: var(--background);
     overflow: hidden;
 }
@@ -160,5 +160,42 @@
 @media (max-width: 800px) {
     .news-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1240px) {
+    .news-hero {
+        padding: 2rem 4% 1.5rem;
+    }
+
+    .news-hero-card {
+        max-width: 100%;
+    }
+
+    .news-grid-section {
+        padding: 0 4% 3.5rem;
+    }
+
+    .news-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .news-hero {
+        padding: 1.25rem 4% 1rem;
+    }
+
+    .news-hero-body {
+        padding: 0 5% 1.5rem;
+    }
+
+    .news-section-title {
+        font-size: 1.35rem;
+        margin: 0.5rem 0 1.25rem;
+    }
+
+    .news-card-body {
+        padding: 1rem 1.1rem 1.25rem;
     }
 }

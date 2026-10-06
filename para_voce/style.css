@@ -129,3 +129,67 @@
 footer {
     margin-top: 6rem;
 }
+
+@media (max-width: 1240px) {
+    .content {
+        margin-top: 3.5rem;
+    }
+
+    .contact-info,
+    .youtube-embed-block {
+        width: 90%;
+        max-width: 800px;
+    }
+
+    .contact-info {
+        padding: 2.5rem;
+    }
+
+    .contact-list {
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        margin-top: 2.5rem;
+    }
+
+    body .content p {
+        text-align: left;
+        hyphens: manual;
+        -webkit-hyphens: manual;
+    }
+
+    .contact-info {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .contact-info p,
+    .emergency-list {
+        font-size: 1rem;
+    }
+
+    .contact-list {
+        padding: 1rem 0;
+    }
+
+    .youtube-embed-block {
+        padding: 1.25rem;
+    }
+
+    .banner-credit {
+        font-size: 0.75rem;
+        bottom: 0.6rem;
+        right: 0.6rem;
+    }
+
+    footer {
+        margin-top: 3rem;
+    }
+}

@@ -17,30 +17,38 @@
                 <h1>Educação em Saúde e<br /> Cuidado da Pessoa Idosa</h1>
             </div>
 
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="../../index.html">Início</a></li>
-                    <li><a href="../../institucional/index.html">Institucional</a></li>
-                    <li><a href="../../para_voce/index.html">Para Você</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle">ABRASCI+ Educação</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.youtube.com/@ABRASCImais/shorts" target="_blank">Conteúdos<br />gratuitos</a></li>
-                            <li><a href="../../convite/pesquisa/index.html">Conteúdos<br />para assinantes</a></li>
-                            <li><a href="../../convite/pesquisa/index.html">Cursos livres<br />e capacitação</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../../noticias/index.html">Notícias</a></li>
-                    <li><a href="../../index.html#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+            <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
 
-            <div class="header-divider"></div>
+            <div class="header-menu" id="site-menu">
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="../../index.html">Início</a></li>
+                        <li><a href="../../institucional/index.html">Institucional</a></li>
+                        <li><a href="../../para_voce/index.html">Para Você</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle">ABRASCI+ Educação</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.youtube.com/@ABRASCImais/shorts" target="_blank">Conteúdos <br />gratuitos</a></li>
+                                <li><a href="../../convite/pesquisa/index.html">Conteúdos <br />para assinantes</a></li>
+                                <li><a href="../../convite/pesquisa/index.html">Cursos livres <br />e capacitação</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../noticias/index.html">Notícias</a></li>
+                        <li><a href="../../index.html#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
 
-            <div class="header-actions">
-                <a href="../../login/index.html" class="header-button login-button">Login</a>
-                <a href="../../cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+                <div class="header-divider"></div>
+
+                <div class="header-actions">
+                    <a href="../../login/index.html" class="header-button login-button">Login</a>
+                    <a href="../../cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+                </div>
             </div>
         </header>
 
@@ -130,5 +138,6 @@
                 </ul>
             </div>
         </footer>
+        <script src="../../nav.js"></script>
     </body>
 </html>

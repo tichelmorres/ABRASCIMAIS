@@ -15,30 +15,38 @@
                 <h1>Educação em Saúde e<br /> Cuidado da Pessoa Idosa</h1>
             </div>
 
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="./index.html">Início</a></li>
-                    <li><a href="./institucional/index.html">Institucional</a></li>
-                    <li><a href="./para_voce/index.html">Para Você</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle">ABRASCI+ Educação</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.youtube.com/@ABRASCImais/shorts" target="_blank">Conteúdos<br />gratuitos</a></li>
-                            <li><a href="./convite/pesquisa/index.html">Conteúdos<br />para assinantes</a></li>
-                            <li><a href="./convite/pesquisa/index.html">Cursos livres<br />e capacitação</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./noticias/index.html">Notícias</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+            <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
 
-            <div class="header-divider"></div>
+            <div class="header-menu" id="site-menu">
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="./index.html">Início</a></li>
+                        <li><a href="./institucional/index.html">Institucional</a></li>
+                        <li><a href="./para_voce/index.html">Para Você</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle">ABRASCI+ Educação</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.youtube.com/@ABRASCImais/shorts" target="_blank">Conteúdos <br />gratuitos</a></li>
+                                <li><a href="./convite/pesquisa/index.html">Conteúdos <br />para assinantes</a></li>
+                                <li><a href="./convite/pesquisa/index.html">Cursos livres <br />e capacitação</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./noticias/index.html">Notícias</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
 
-            <div class="header-actions">
-                <a href="./login/index.html" class="header-button login-button">Login</a>
-                <a href="./cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+                <div class="header-divider"></div>
+
+                <div class="header-actions">
+                    <a href="./login/index.html" class="header-button login-button">Login</a>
+                    <a href="./cadastro/index.html" class="header-button register-button">Cadastrar-se</a>
+                </div>
             </div>
         </header>
 
@@ -58,7 +66,7 @@
                     <div class="slide" aria-label="Slide 2 de 5">
                         <img src="./assets/carousel/idosos.jpg" alt="Casal de pessoas idosas sorridente tirando uma selfie ao ar livre" />
                         <div class="slide-overlay first-slide-overlay">
-                            <h2 class="overlay-title">Sua saúde<br />importa!</h2>
+                            <h2 class="overlay-title">Sua saúde <br />importa!</h2>
                             <a href="#" class="overlay-button overlay-button--accent">Conhecer</a>
                         </div>
                     </div>
@@ -68,7 +76,7 @@
                             <img src="./assets/carousel/familia.jpg" alt="Avô abraçando as netas sorridentes" />
                         </div>
                         <div class="slide-overlay second-slide-overlay">
-                            <h2 class="overlay-title overlay-title">Um cuidado<br />que faz<br />a diferença</h2>
+                            <h2 class="overlay-title overlay-title">Um cuidado <br />que faz <br />a diferença</h2>
                             <a href="#" class="overlay-button overlay-button--accent">Saiba mais</a>
                         </div>
                     </div>
@@ -76,7 +84,7 @@
                     <div class="slide" aria-label="Slide 4 de 5">
                         <img src="./assets/carousel/cuidadora.jpg" alt="Cuidadora sorridente apoiando a mão no ombro de uma senhora idosa" />
                         <div class="slide-overlay third-slide-overlay">
-                            <h2 class="overlay-title overlay-title--accent">Um cuidado<br />que faz<br />a diferença</h2>
+                            <h2 class="overlay-title overlay-title--accent">Um cuidado <br />que faz <br />a diferença</h2>
                             <a href="#" class="overlay-button overlay-button--accent">Saiba mais</a>
                         </div>
                     </div>
@@ -84,7 +92,7 @@
                     <div class="slide" aria-label="Slide 5 de 5">
                         <img src="./assets/carousel/pcd.jpg" alt="Idoso em cadeira de rodas usando o celular, sentado à mesa com notebook" />
                         <div class="slide-overlay fourth-slide-overlay">
-                            <h2 class="overlay-title">Sua saúde<br />importa!</h2>
+                            <h2 class="overlay-title">Sua saúde <br />importa!</h2>
                             <a href="#" class="overlay-button">Conhecer</a>
                         </div>
                     </div>
@@ -247,6 +255,7 @@
             </div>
         </footer>
 
+        <script src="./nav.js"></script>
         <script>
             const slides = document.querySelectorAll(".slide");
             const nextButton = document.querySelector(".next");
@@ -280,6 +289,33 @@
 
             nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
             previousButton.addEventListener("click", () => showSlide(currentSlide - 1));
+
+            // Toque: arrastar para os lados troca o slide
+            const carousel = document.querySelector(".carousel");
+            const SWIPE_DISTANCE = 50;
+            let touchStartX = null;
+            let touchStartY = null;
+
+            carousel.addEventListener("pointerdown", (event) => {
+                if (event.pointerType === "mouse") return;
+                touchStartX = event.clientX;
+                touchStartY = event.clientY;
+            });
+
+            carousel.addEventListener("pointerup", (event) => {
+                if (touchStartX === null) return;
+                const dx = event.clientX - touchStartX;
+                const dy = event.clientY - touchStartY;
+                touchStartX = null;
+                touchStartY = null;
+                if (Math.abs(dx) < SWIPE_DISTANCE || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+                showSlide(dx < 0 ? currentSlide + 1 : currentSlide - 1);
+            });
+
+            carousel.addEventListener("pointercancel", () => {
+                touchStartX = null;
+                touchStartY = null;
+            });
 
             showSlide(0);
         </script>
