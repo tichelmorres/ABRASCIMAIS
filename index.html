@@ -2,11 +2,31 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KPSW4ZWC');</script>
+        <!-- End Google Tag Manager -->
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4J0J059M0"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-F4J0J059M0');
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ABRASCI - Educação em Saúde e Cuidado da Pessoa Idosa</title>
+        <title>ABRASCI+ - Educação em Saúde e Cuidado da Pessoa Idosa</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPSW4ZWC"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <header class="header">
             <div class="header-left">
                 <a href="./index.html">
@@ -31,8 +51,8 @@
                             <a class="dropdown-toggle">ABRASCI+ Educação</a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://www.youtube.com/@ABRASCImais/shorts" target="_blank">Conteúdos <br />gratuitos</a></li>
-                                <li><a href="./convite/pesquisa/index.html">Conteúdos <br />para assinantes</a></li>
-                                <li><a href="./convite/pesquisa/index.html">Cursos livres <br />e capacitação</a></li>
+                                <li><a href="./educacao/assinantes/index.html">Conteúdos <br />para assinantes</a></li>
+                                <li><a href="./educacao/livres/index.html">Cursos livres <br />e capacitação</a></li>
                             </ul>
                         </li>
                         <li><a href="./noticias/index.html">Notícias</a></li>
@@ -53,17 +73,35 @@
         <main>
             <section class="carousel">
                 <div class="carousel-track">
-                    <div class="slide slide--pesquisa active" aria-label="Slide 1 de 5">
-                        <div class="pesquisa-slide-frame">
-                            <img src="./assets/convite/pesquisa.jpg" alt="Convite para participar da pesquisa da ABRASCI+" />
-                            <a href="https://forms.gle/UCveoUyL3pwsi1jN8" target="_blank" rel="noopener noreferrer" class="pesquisa-slide-button">
-                                <img src="./assets/convite/form.png" alt="" class="pesquisa-slide-icon" />
-                                RESPONDER
-                            </a>
-                        </div>
+                    <div class="slide slide--wide active" aria-label="Slide 1 de 9">
+                        <img src="./assets/carousel/inicial.png" alt="Conteúdos educativos e imagens gratuitas. Fonte: Ministério da Saúde, Freepik e Gemini NotebookLM">
                     </div>
 
-                    <div class="slide" aria-label="Slide 2 de 5">
+                    <div class="slide slide--wide" aria-label="Slide 2 de 9">
+                        <a href="./para_voce/index.html" class="slide-link">
+                            <img src="./assets/carousel/bem_vindo.png" alt="Bem-vindos(as)! A ABRASCI+ preparou conteúdos exclusivos para você. Saiba mais: acesse Para Você" />
+                        </a>
+                    </div>
+
+                    <div class="slide slide--convite" aria-label="Slide 3 de 9">
+                        <a href="https://forms.gle/KJodW8S74cvygLm39" target="_blank" rel="noopener noreferrer" class="convite-slide-frame">
+                            <img src="./assets/carousel/momento_abrasci.png" alt="Momento ABRASCI: próximo encontro em 21/10/2026, das 21:00h às 22:00h. Tema: autocuidado e estratégias para o enfrentamento do câncer" />
+                            <span class="convite-slide-button slide-button-a">PARTICIPAR</span>
+                        </a>
+                    </div>
+
+                    <div class="slide slide--convite" aria-label="Slide 4 de 9">
+                        <a href="https://forms.gle/UCveoUyL3pwsi1jN8" target="_blank" rel="noopener noreferrer" class="convite-slide-frame">
+                            <img src="./assets/carousel/pesquisa.png" alt="Convite para participar da pesquisa da ABRASCI+" />
+                            <span class="convite-slide-button slide-button-b">RESPONDER</span>
+                        </a>
+                    </div>
+
+                    <div class="slide slide--wide" aria-label="Slide 5 de 9">
+                        <img src="./assets/carousel/ajuda.png" alt="Precisa de ajuda? Telefones de emergências, direitos e proteção ao idoso e saúde" />
+                    </div>
+
+                    <div class="slide slide--idosos" aria-label="Slide 6 de 9">
                         <img src="./assets/carousel/idosos.jpg" alt="Casal de pessoas idosas sorridente tirando uma selfie ao ar livre" />
                         <div class="slide-overlay first-slide-overlay">
                             <h2 class="overlay-title">Sua saúde <br />importa!</h2>
@@ -71,7 +109,7 @@
                         </div>
                     </div>
 
-                    <div class="slide" aria-label="Slide 3 de 5">
+                    <div class="slide slide--familia" aria-label="Slide 7 de 9">
                         <div class="second-slide-image">
                             <img src="./assets/carousel/familia.jpg" alt="Avô abraçando as netas sorridentes" />
                         </div>
@@ -81,7 +119,7 @@
                         </div>
                     </div>
 
-                    <div class="slide" aria-label="Slide 4 de 5">
+                    <div class="slide slide--cuidadora" aria-label="Slide 8 de 9">
                         <img src="./assets/carousel/cuidadora.jpg" alt="Cuidadora sorridente apoiando a mão no ombro de uma senhora idosa" />
                         <div class="slide-overlay third-slide-overlay">
                             <h2 class="overlay-title overlay-title--accent">Um cuidado <br />que faz <br />a diferença</h2>
@@ -89,7 +127,7 @@
                         </div>
                     </div>
 
-                    <div class="slide" aria-label="Slide 5 de 5">
+                    <div class="slide slide--pcd" aria-label="Slide 9 de 9">
                         <img src="./assets/carousel/pcd.jpg" alt="Idoso em cadeira de rodas usando o celular, sentado à mesa com notebook" />
                         <div class="slide-overlay fourth-slide-overlay">
                             <h2 class="overlay-title">Sua saúde <br />importa!</h2>
@@ -112,22 +150,22 @@
             </section>
 
             <section class="SOU_cards">
-                <a href="#sou-idoso" class="SOU_card">
+                <a href="./para_voce/index.html#sou-idoso" class="SOU_card">
                     <img src="./assets/cards/idoso.png" alt="" class="card_icon" />
                     <p class="card_text">Sou idoso</p>
                 </a>
 
-                <a href="#sou-pcd" class="SOU_card">
+                <a href="./para_voce/index.html#sou-pcd" class="SOU_card">
                     <img src="./assets/cards/pcd.png" alt="" class="card_icon" />
                     <p class="card_text">Sou PCD</p>
                 </a>
 
-                <a href="#sou-familiar" class="SOU_card">
+                <a href="./para_voce/index.html#sou-familiar" class="SOU_card">
                     <img src="./assets/cards/familiar.png" alt="" class="card_icon" />
                     <p class="card_text">Sou familiar</p>
                 </a>
 
-                <a href="#sou-cuidador" class="SOU_card">
+                <a href="./para_voce/index.html#sou-cuidador" class="SOU_card">
                     <img src="./assets/cards/cuidador.png" alt="" class="card_icon" />
                     <p class="card_text">Sou cuidador</p>
                 </a>
@@ -139,30 +177,6 @@
                 <p>Entretanto, quase ninguém explica como ajudar alguém a levantar sem machucar as costas, o que observar na alimentação, no sono e no humor, quando o esquecimento deixa de ser normal, como conversar com quem se recusa a aceitar ajuda. Sem orientação, tudo isso se torna ainda mais difícil, tanto para a pessoa idosa quanto para quem cuida dela.</p>
                 <p>A ABRASCI+ foi criada para preencher essa lacuna. Somos uma plataforma digital de educação e apoio ao cuidado, voltada a idosos, familiares, cuidadores profissionais e a qualquer pessoa interessada em envelhecer com saúde. Reunimos conteúdos educativos, cursos de capacitação e ferramentas digitais, e mantemos uma rede de apoio para que ninguém precise resolver tudo por conta própria.</p>
                 <p>Nosso princípio é simples: as informações confiáveis, se ditas com clareza, tornam o cuidado mais seguro, fácil e efetivo. Quem cuida com conhecimento erra menos, se desgasta menos e consegue enxergar a pessoa que está à sua frente, com história, vontades e direito de opinar sobre a própria vida. Para conhecer a associação por dentro, veja <a href="institucional/index.html">quem somos, nossa história e nossos valores</a>.</p>
-
-                <section id="sou-idoso">
-                    <h3>Sou idoso</h3>
-                    <p>Chega uma fase em que as pessoas ao redor começam a decidir por você. Decidem o que é melhor comer, se é seguro sair sozinho, se ainda vale a pena mexer no dinheiro. Em geral isso vem de uma preocupação sincera, mas o resultado é que vamos sendo poupados até das escolhas que sempre foram nossas, e das quais ainda deveríamos ter controle, não é verdade?</p>
-                    <p>Conhecer o próprio corpo, os riscos da rotina e os direitos que a lei garante é o que devolve o controle da conversa. A ABRASCI+ reúne informações sobre saúde, prevenção e direitos numa linguagem direta, em <a href="ABRA_gratuito/index.html">vídeos de acesso gratuito</a>, pensados para adultos com muita vida vivida que querem seguir participando das decisões. Todos nós temos uma voz, e é preciso que nos ouçam.</p>
-                </section>
-
-                <section id="sou-pcd">
-                    <h3>Sou PCD</h3>
-                    <p>Grande parte do que se produz sobre envelhecimento imagina um idoso sem deficiência, com o corpo, a casa e a rotina todos convencionais. Quem envelhece com uma deficiência, ou já convive com ela há décadas, encontra pouco material que lhe diga respeito. Perguntas simples, como adaptar o banheiro, reorganizar a rotina de cuidados ou ajustar hábitos quando a idade muda uma condição que já existia, ficam sem resposta.</p>
-                    <p>Famílias que têm um parente com deficiência passam pelo mesmo vazio. Por isso a ABRASCI+ leva acessibilidade e inclusão a sério e considera, ao preparar seus <a href="https://www.youtube.com/@ABRASCImais" target="_blank">conteúdos</a>, que cada pessoa tem necessidades diferentes. A meta é a mesma para todos: manter a autonomia pelo maior tempo possível, com os ajustes que cada caso pedir. Se algo de que você precisa ainda não estiver contemplado, escreva para <a href="mailto:abrasci.mais@gmail.com">abrasci.mais@gmail.com</a>.</p>
-                </section>
-
-                <section id="sou-familiar">
-                    <h3>Sou familiar</h3>
-                    <p>Seja honesto: alguém pergunta se você quer ser cuidador? Na maioria das vezes, não. A rotina simplesmente muda, e de repente outras coisas passam a fazer parte dos seus dias: consultas, exames, remédios em horários certos, ligações para o plano de saúde... Tudo isso convive com o trabalho, com a própria casa, com os filhos, e quase sempre vem acompanhado de uma pergunta incômoda: será que estou fazendo direito?</p>
-                    <p>Essa dúvida é comum e mostra que você leva a tarefa a sério. Na ABRASCI+ há <a href="https://www.youtube.com/@ABRASCImais" target="_blank">orientação prática para o dia a dia</a> e uma rede de familiares que enfrentam o mesmo desafio. Quem cuida também precisa de apoio, e reconhecer isso faz parte do nosso trabalho.</p>
-                </section>
-
-                <section id="sou-cuidador">
-                    <h3>Sou cuidador</h3>
-                    <p>Seu cuidado transforma a rotina da pessoa idosa. Cada caso é um caso, e as atividades diárias daqueles que necessitam de cuidados precisam ser pensadas e realizadas com muito carinho. Nós, da ABRASCI+, valorizamos imensamente o trabalho do cuidador. É ele quem traz confiança à família ao atuar sempre com ética e conhecimento, valorizando a vida.</p>
-                    <p>Sabemos que esse papel é fortalecido a cada novo ciclo de aprendizagem: o mercado de trabalho nessa área é dinâmico e cheio de novas tendências e tecnologias em saúde, o que exige preparo. Por isso, na ABRASCI+, você tem acesso a conteúdos de aprimoramento continuado através dos nossos <a href="https://www.youtube.com/@ABRASCImais" target="_blank">materiais gratuitos</a>. Desenvolva-se cada vez mais para cuidar da longevidade conosco!</p>
-                </section>
 
                 <section id="sobre">
                     <h3>Sobre a ABRASCI+</h3>
@@ -225,11 +239,11 @@
                         </li>
                         <li>
                             <img src="./assets/footer/closed-book.png" alt="" class="list-icon">
-                            <a href="./convite/pesquisa/index.html">Conteúdos para Assinantes</a>
+                            <a href="./educacao/assinantes/index.html">Conteúdos para Assinantes</a>
                         </li>
                         <li>
                             <img src="./assets/footer/certificate.png" alt="" class="list-icon">
-                            <a href="./convite/pesquisa/index.html">Cursos Livres e Capacitação</a>
+                            <a href="./educacao/livres/index.html">Cursos Livres e Capacitação</a>
                         </li>
                     </ul>
 

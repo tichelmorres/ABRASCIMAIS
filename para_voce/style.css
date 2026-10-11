@@ -25,8 +25,21 @@
     opacity: 1;
 }
 
+:root {
+    /* espaço vertical entre blocos de conteúdo e a tabela de contatos */
+    --section-gap: 5.5rem;
+}
+
 .content {
-    margin: 5.5rem auto 2rem;
+    margin: var(--section-gap) auto 2rem;
+}
+
+.intro-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
 }
 
 .content p {
@@ -61,10 +74,24 @@
     font-size: 1.2rem;
 }
 
+.contact-heading,
+.contact-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
 .contact-info{
     font-family: "Manrope", sans-serif;
     width: clamp(800px, 20vw, 800px);
-    margin: 2rem auto;
+    margin: var(--section-gap) auto 2rem;
     border: 1px solid var(--accent);
     padding: 4rem;
     border-radius: 12px;
@@ -76,8 +103,17 @@
     font-size: 1.1rem;
 }
 
-.contact-list li::marker {
-  content: "- ";
+/* cada contato em duas colunas: número (com o traço) | descrição */
+.contact-list li {
+    display: grid;
+    grid-template-columns: 2.7em 1fr;
+    column-gap: 0.25em;
+}
+
+.contact-list li strong::before {
+    content: "- ";
+    content: "- " / "";
+    font-weight: 400;
 }
 
 .blue-line {
@@ -126,13 +162,64 @@
     margin-top: 0.5rem;
 }
 
+/* imagem do Momento ABRASCI com botão sobre o campo branco da imagem */
+.momento-section {
+    margin: var(--section-gap) auto 0;
+}
+
+.momento-frame {
+    container-type: inline-size;
+    position: relative;
+    display: block;
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.momento-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.momento-button {
+    position: absolute;
+    z-index: 10;
+    left: 24.6%;
+    top: 87.5%;
+    width: 70.9%;
+    height: 8.1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 26px;
+    color: #0b3fae;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 5cqw;
+    letter-spacing: 0.08em;
+    line-height: normal;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.momento-frame:hover .momento-button,
+.momento-frame:focus-visible .momento-button {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
 footer {
     margin-top: 6rem;
 }
 
 @media (max-width: 1240px) {
+    :root {
+        --section-gap: 3.5rem;
+    }
+
     .content {
-        margin-top: 3.5rem;
+        margin-top: var(--section-gap);
     }
 
     .contact-info,
@@ -156,8 +243,12 @@ footer {
 }
 
 @media (max-width: 600px) {
+    :root {
+        --section-gap: 2.5rem;
+    }
+
     .content {
-        margin-top: 2.5rem;
+        margin-top: var(--section-gap);
     }
 
     body .content p {

@@ -1,0 +1,28 @@
+.header {
+    margin-bottom: -4rem;
+}
+
+.educacao-showcase {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+.educacao-image {
+    display: block;
+    width: min(92%, 640px);
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .educacao-showcase {
+        padding: 2rem 0;
+    }
+
+    .educacao-image {
+        width: 94%;
+    }
+}

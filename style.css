@@ -330,8 +330,30 @@ ul.dropdown-menu {
     opacity: 1;
 }
 
-/* slide da pesquisa */
-.slide--pesquisa {
+/* o crédito do Freepik só aparece nos slides com foto do Freepik */
+.carousel:has(.slide--wide.active) .carousel-credit,
+.carousel:has(.slide--convite.active) .carousel-credit {
+    display: none;
+}
+
+/* slides largos (banner): a imagem inteira aparece, sem cortes */
+.slide--wide {
+    background-color: var(--background);
+}
+
+.slide--wide img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.slide-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* slides quadrados de convite (Momento ABRASCI e pesquisa) */
+.slide--convite {
     container-type: size;
     display: flex;
     align-items: center;
@@ -339,15 +361,16 @@ ul.dropdown-menu {
     background-color: var(--background);
 }
 
-.pesquisa-slide-frame {
+.convite-slide-frame {
     container-type: inline-size;
     position: relative;
+    display: block;
     width: min(100cqw, 100cqh);
     aspect-ratio: 1 / 1;
     line-height: 0;
 }
 
-.pesquisa-slide-frame > img {
+.convite-slide-frame > img {
     display: block;
     width: 100%;
     height: 100%;
@@ -355,36 +378,41 @@ ul.dropdown-menu {
     object-position: center;
 }
 
-.pesquisa-slide-button {
+/* botão sobre o campo branco já desenhado na imagem */
+.convite-slide-button {
     position: absolute;
-    top: 44%;
-    left: 62%;
     z-index: 10;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.8cqw;
-    padding: 3cqw 3.5cqw;
-    border-radius: 999px;
+    justify-content: center;
+    color: #0b3fae;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 4.2cqw;
+    letter-spacing: 0.08em;
+    line-height: normal;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.convite-slide-frame:hover .convite-slide-button,
+.convite-slide-frame:focus-visible .convite-slide-button {
     background-color: var(--accent);
     color: var(--background);
-    font-family: "DM Sans", sans-serif;
-    font-weight: 600;
-    font-size: 2.8cqw;
-    line-height: normal;
-    white-space: nowrap;
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.pesquisa-slide-button:hover {
-    background-color: var(--accent-extra);
-    transform: scale(1.02);
+.slide-button-a {
+    left: 21.9%;
+    top: 83.9%;
+    width: 72.8%;
+    height: 11.3%;
+    border-radius: 30px;
 }
-
-.pesquisa-slide-button .pesquisa-slide-icon {
-    width: 2.6cqw;
-    height: 2.6cqw;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
+.slide-button-b {
+    left: 21.5%;
+    top: 83.9%;
+    width: 74.2%;
+    height: 11.0%;
+    border-radius: 32px;
 }
 
 /* CTA sobre os slides */
@@ -1090,24 +1118,22 @@ ul.dropdown-menu {
         right: 0.6rem;
     }
 
-    /* cover fica centrado no assunto de cada foto */
-    .slide:nth-child(2) img {
+    .slide--idosos img {
         object-position: 45% top;
     }
 
-    .slide:nth-child(3) img {
+    .slide--familia img {
         object-position: 85% top;
     }
 
-    .slide:nth-child(4) img {
+    .slide--cuidadora img {
         object-position: 70% top;
     }
 
-    .slide:nth-child(5) img {
+    .slide--pcd img {
         object-position: 20% top;
     }
 
-    /* titulo e bot~qo ficam na base do slide, sobre um degradê */
     .slide .slide-overlay {
         top: auto;
         right: auto;
