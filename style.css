@@ -611,6 +611,77 @@ ul.dropdown-menu {
     font-weight: 700;
 }
 
+/* convites lado a lado (pesquisa e conteúdos gratuitos) */
+.invite-roll {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.25rem 0;
+}
+
+.invite-card {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 560px;
+    padding: 10px;
+    background-color: var(--background-high);
+}
+
+.invite-frame {
+    container-type: inline-size;
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 0;
+}
+
+.invite-frame > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* botão sobre o campo branco já desenhado na imagem */
+.invite-button {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0b3fae;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 4.2cqw;
+    letter-spacing: 0.08em;
+    line-height: normal;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.invite-frame:hover .invite-button,
+.invite-frame:focus-visible .invite-button {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.invite-button--pesquisa {
+    left: 21.25%;
+    top: 83.9%;
+    width: 74.2%;
+    height: 11.0%;
+    border-radius: 25px;
+}
+
+.invite-button--gratuitos {
+    left: 21.0%;
+    top: 85.9%;
+    width: 74.0%;
+    height: 9.8%;
+    border-radius: 20px;
+}
+
 .values-list {
     list-style: none;
     display: flex;
@@ -1082,6 +1153,18 @@ ul.dropdown-menu {
 
 /* ---------- tablet pequeno / celular grande ---------- */
 @media (max-width: 768px) {
+    .invite-roll {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .invite-card {
+        flex: none;
+        width: 100%;
+        max-width: 480px;
+    }
+
     .SOU_cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;

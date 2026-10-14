@@ -58,14 +58,6 @@
     height: auto;
 }
 
-.logo_desc {
-    font-size: 1.0rem;
-    line-height: 1.2;
-    text-align: center;
-    color: #555;
-    margin-top: 0.3rem;
-}
-
 .info-content p::first-letter {
     float: left;
     font-size: 4em;
